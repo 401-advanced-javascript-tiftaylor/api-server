@@ -1,0 +1,25 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "body",
+      "display_name": "Body Products",
+      "description": "Contains items to wash the body"
+    },
+    {
+      "id": "21",
+      "name": "body",
+      "display_name": "Body Products",
+      "description": "Contains items to wash the body"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "category": "1",
+      "name": "shampoo",
+      "display_name": "Awesome Shampoo",
+      "description": "Your hair will be awesome if you use this"
+    }
+  ]
+}

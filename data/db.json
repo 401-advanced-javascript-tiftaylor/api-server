@@ -5,6 +5,12 @@
       "name": "body",
       "display_name": "Body Products",
       "description": "Contains items to wash the body"
+    },
+    {
+      "id": "21",
+      "name": "body",
+      "display_name": "Body Products",
+      "description": "Contains items to wash the body"
     }
   ],
   "products": [

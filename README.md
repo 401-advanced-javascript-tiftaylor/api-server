@@ -35,6 +35,6 @@
 **Lab 07**
 ![UML Lab07](assets/lab7uml.jpg)
 **Lab 08**
-![UML Lab08]()
+![UML Lab08](assets/lab8uml.jpg)
 **Lab 09**
 ![UML Lab09]()

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "watch": "nodemon index.js",
+    "test": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
@@ -14,10 +16,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.16.2"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
   },
   "bugs": {
     "url": "https://github.com/401-advanced-javascript-tiftaylor/api-server/issues"
   },
-  "homepage": "https://github.com/401-advanced-javascript-tiftaylor/api-server#readme"
+  "homepage": "https://github.com/401-advanced-javascript-tiftaylor/api-server#readme",
+  "devDependencies": {
+    "jest": "^26.6.0",
+    "nodemon": "^2.0.6",
+    "supertest": "^5.0.0"
+  }
 }

@@ -10,27 +10,30 @@
 
 ### Setup
 #### `.env` requirements
-- TBD
+- PORT
 
 #### `package.json` requirements
 - `npm install`
-  - [json-server](https://www.npmjs.com/package/json-server)
+  - [express](https://expressjs.com/)
+  - [dotenv](https://www.npmjs.com/package/dotenv)
 
 
 
 #### Running the app
-- TBD
+- `npm start`
 
 #### Tests
-
 - Unit Tests: `npm test`
+- `npm install`
+  - [jest](https://jestjs.io/)
+  - [supertest](https://www.npmjs.com/package/supertest)
 
 
 ### UML for Lab07 thru Lab 09
 **Lab 06**
-*No UML requested on Lab06 instructions*
+![UML Lab06](assets/lab6uml.jpg)
 **Lab 07**
-![UML Lab07]()
+![UML Lab07](assets/lab7uml.jpg)
 **Lab 08**
 ![UML Lab08]()
 **Lab 09**

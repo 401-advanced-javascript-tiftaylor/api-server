@@ -1,5 +1,6 @@
 const timeStamp = require('../middleware/timestamp.js')
 const logger = require('../middleware/logger.js')
+const modelMaker = require('../middleware/modelMaker.js')
 const notFound = require('../middleware/404.js')
 const serverErr = require('../middleware/500.js');
 
@@ -31,6 +32,18 @@ describe('testing middleware functions', () => {
     let next = ()=>{};
     logger(req, res, next);
     expect(console.log).toHaveBeenLastCalledWith("request time", "method", "path");
+  })
+
+  test('modelMaker function test', () => {
+    let req = {
+      params: {model: 'products'}
+    }
+
+    let res = {};
+    let next = ()=>{};
+
+    modelMaker(req, res, next);
+    expect(req.model).toBeTruthy();
   })
 
   test('404 will send a msg', () => {

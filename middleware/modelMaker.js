@@ -18,7 +18,7 @@ function modelMaker(req, res, next){
       next();
       return;
     default: 
-      next("Invalid Model");
+      next(new Error("Invalid Model"));
       return;
   }
 }

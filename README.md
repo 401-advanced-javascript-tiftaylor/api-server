@@ -11,6 +11,7 @@
 ### Setup
 #### `.env` requirements
 - PORT
+- MONGODB_URI
 
 #### `package.json` requirements
 - `npm install`
@@ -36,7 +37,7 @@
 **Lab 08**
 ![UML Lab08](assets/lab8uml.jpg)
 **Lab 09**
-![UML Lab09]()
+![UML Lab09](assets/lab9uml.jpg)
 
 ### Resources: 
 - For dealing with _id I used this tip from [StackOverflow](https://stackoverflow.com/questions/7034848/mongodb-output-id-instead-of-id)

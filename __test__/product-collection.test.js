@@ -1,6 +1,6 @@
-const ProductsModel = require('../lib/models/products/products.schema.js');
+
 const ProductsCollection = require('../lib/models/products/products.collection.js');
-const collection = new ProductsCollection(ProductsModel);
+const collection = new ProductsCollection();
 
 require('@code-fellows/supergoose');
 

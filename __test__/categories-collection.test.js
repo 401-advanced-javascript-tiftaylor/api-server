@@ -1,6 +1,6 @@
-const CategoriesModel = require('../lib/models/categories/categories.schema.js');
+
 const CategoriesCollection = require('../lib/models/categories/categories.collection.js');
-const collection = new CategoriesCollection(CategoriesModel);
+const collection = new CategoriesCollection();
 
 require('@code-fellows/supergoose');
 

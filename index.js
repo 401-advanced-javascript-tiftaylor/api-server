@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   findAndModify: false,
+  returnOriginal: false,
 }).then(() => {
   server.start(PORT);
 }).catch((error) => {

@@ -19,7 +19,10 @@ router.post('/categories', (req,res,next) => {
 router.get('/categories', (req,res, next) => {
   collection.read()
     .then(categories => {
-      res.send(categories);
+      res.send({
+        results: categories,
+        count: categories.length,
+      });
     })
     .catch(next);
 
@@ -29,7 +32,7 @@ router.get('/categories/:id', (req,res,next) => {
   const id = req.params.id;
   collection.read(id)
     .then(category => {
-      res.send(category);
+      res.send(category[0]);
     })
     .catch(next);
 })
@@ -45,12 +48,15 @@ router.put('/categories/:id', (req,res, next) => {
     .catch(next);
 })
 
-// router.delete('/categories/:id', (req,res) => {
-//   const id = req.params.id;
-//   const index = db.products.findIndex(p => p.id === id);
-//   db.products.splice(index, 1);
-//   res.send({});
-// })
+router.delete('/categories/:id', (req,res, next) => {
+  const id = req.params.id;
+
+  collection.delete(id)
+    .then(() => {
+      res.send({});
+    })
+    .catch(next);
+})
 
 
 module.exports = router;

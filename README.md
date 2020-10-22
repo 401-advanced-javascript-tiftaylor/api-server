@@ -18,7 +18,6 @@
   - [dotenv](https://www.npmjs.com/package/dotenv)
 
 
-
 #### Running the app
 - `npm start`
 
@@ -38,3 +37,6 @@
 ![UML Lab08](assets/lab8uml.jpg)
 **Lab 09**
 ![UML Lab09]()
+
+### Resources: 
+- For dealing with _id I used this tip from [StackOverflow](https://stackoverflow.com/questions/7034848/mongodb-output-id-instead-of-id)

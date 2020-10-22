@@ -5,10 +5,12 @@ const serverErr = require('../middleware/500.js');
 
 // resource: https://stephencharlesweiss.com/jest-testing-spyon-consoles/
 const consoleSpy = jest.spyOn(console, 'log').mockImplementation()
+const consoleSpyErr = jest.spyOn(console, 'error').mockImplementation()
 
 describe('testing middleware functions', () => {
   beforeEach(() => {
     consoleSpy.mockClear();
+    consoleSpyErr.mockClear();
   });
 
   test('timestamp fn attaches requestTime to req obj', () => {
@@ -45,7 +47,9 @@ describe('testing middleware functions', () => {
   })
 
   test('500 will send a msg', () => {
-    let err = {};
+    let err = {
+      stack: 'fake stack'
+    };
     let req = {};
     let res = {};
     res.status = () => res;
@@ -56,6 +60,7 @@ describe('testing middleware functions', () => {
     serverErr(err, req, res, next);
     expect(res.status).toHaveBeenLastCalledWith(500);
     expect(res.send).toHaveBeenLastCalledWith('500 Server Error!');
+    expect(console.error).toHaveBeenLastCalledWith('fake stack');
   })
 
 })
